@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 1, 2019 8:58:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.vvp.java.Student" table="student" catalog="college" optimistic-lock="version">
+        <id name="PId" type="java.lang.Integer">
+            <column name="P_id" />
+            <generator class="identity" />
+        </id>
+        <property name="PName" type="string">
+            <column name="P_Name" length="50" not-null="true" />
+        </property>
+        <property name="PEnroll" type="float">
+            <column name="P_Enroll" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="PSem" type="int">
+            <column name="P_Sem" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
